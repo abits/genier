@@ -1,4 +1,4 @@
-using Genie.Router, Genie.Renderer
+using Genie.Router, Genie.Renderer, Genie.Renderer.Html
 
 route("/") do
   serve_static_file("welcome.html")
