@@ -1,4 +1,4 @@
-using Genie.Router
+using Genie.Router, Genie.Renderer
 
 route("/") do
   serve_static_file("welcome.html")
@@ -6,5 +6,5 @@ end
 
 
 route("/idx") do
-  serve_static_file("index.html")
+  html(Renderer.filepath("public/index.jl.html"))
 end
