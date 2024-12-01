@@ -1,5 +1,16 @@
-<ul>
-    <% for_each(worktimes) do worktime %>
-        <li>$(worktime.title) by $(worktime.author)</li>
-    <% end %>
-</ul>
+<table>
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Author</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% for_each(worktimes) do worktime %>
+            <tr>
+                <th scope="row">$(worktime.title)</th>
+                <td>$(worktime.author)</td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
